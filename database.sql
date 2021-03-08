@@ -1,0 +1,4 @@
+CREATE TABLE List ( list_id INT NOT NULL AUTO_INCREMENT , name VARCHAR(256) NOT NULL, added DATETIME NOT NULL, PRIMARY KEY (list_id) ) ENGINE = InnoDB;
+CREATE TABLE ListArticle ( article_id int NOT NULL AUTO_INCREMENT, name varchar(256) NOT NULL, PRIMARY KEY (article_id),  UNIQUE name (name) ) ENGINE=InnoDB;
+CREATE TABLE ListArticleValue ( article_value_id int NOT NULL AUTO_INCREMENT, name varchar(255) NOT NULL,  PRIMARY KEY (article_value_id), UNIQUE name (name) ) ENGINE=InnoDB;
+CREATE TABLE ListValue ( value_id int NOT NULL AUTO_INCREMENT, list_id int NOT NULL,article_id int NOT NULL, article_value_id int NOT NULL, PRIMARY KEY (value_id), UNIQUE value (list_id, article_id, article_value_id) ) ENGINE=InnoDB;
