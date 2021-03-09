@@ -3,10 +3,10 @@
 class Model {
 	public $db;
 	public $dbfile = "database.sql";
-	public $dbhost = "localhost";
-	public $dbname = "test";
-	public $dbuser = "mysql";
-	public $dbpass = "mysql";
+	public $dbhost = "remotemysql.com";
+	public $dbname = "8pHj3nOmKN";
+	public $dbuser = "8pHj3nOmKN";
+	public $dbpass = "kvt9ohfdsu";
 	public $tables = ["List", "ListValue", "ListArticle", "ListArticleValue"];
 
 	function __construct () {
