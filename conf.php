@@ -14,7 +14,7 @@ class Model {
 		if ($this->db->connect_errno) die("Не удалось подключиться к MySQL: {$this->db->connect_errno} {$this->db->connect_error}");
 		foreach ($this->tables as $key => $value) {
 			if (!$this->db->query("SHOW TABLES LIKE '{$value}'")->fetch_assoc()) {
-				$this->print("Table <strong>{$value}</strong> not found. Trying to create a table");
+				$this->print("Table <strong>{$value}</strong> not found. Trying to create the table");
 				$sql = file(__DIR__ . "/{$this->dbfile}");
 				foreach ($sql as $k => $line) {
 					if (preg_match("/{$value}/", $line)) {
